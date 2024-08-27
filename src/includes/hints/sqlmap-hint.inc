@@ -361,7 +361,7 @@ netsh firewall add portopening protocol=TCP port=23 name=telnet mode=enable scop
 ###
 ####
 ####
-			sqlmap.py --url=&quot;http://192.168.56.102/mutillidae/index.php?page=login.php&quot; --data=&quot;username=asdf&amp;password=asdf&amp;login-php-submit  ###trufflehog:ignore
+			sqlmap.py --url=&quot;http://192.168.56.102/mutillidae/index.php?page=login.php&quot; --data=&quot;username=asdf&amp;password=asdf&amp;login-php-submit
 			<br/><br/>
 			<span class="report-header">Capturing Request To Pass To SQLMAP</span>
 			<br/><br/>
