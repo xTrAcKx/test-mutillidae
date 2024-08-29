@@ -20,6 +20,5 @@ jobs:
     
     - name: Secret Scanning
       uses: trufflesecurity/trufflehog@main
-      with:
-        extra_args: --debug 
-        base: "0f9d4a66f2540f5154c01476e81161935aad6291"
+      with: 
+        base: "c62bb99abeb5e7f610a57fd0c8f4e6e43f4dec4c"
