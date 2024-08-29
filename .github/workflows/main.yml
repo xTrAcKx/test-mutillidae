@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+      - pipelines  
   workflow_dispatch:
 
 jobs:
@@ -12,7 +13,12 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+    
+    - name: Secret Scan using Docker
+      run: 
+        docker run --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo https://github.com/xTrAcKx/test-mutillidae.git
+    
     - name: Secret Scanning
       uses: trufflesecurity/trufflehog@main
-      with:
-        extra_args: --debug 
+      with: 
+        base: "c62bb99abeb5e7f610a57fd0c8f4e6e43f4dec4c"
